@@ -6,18 +6,18 @@ var fs = require('fs');
 
 
 async function createUser(ctx) {
-    const { userid, username, usercredential, userdepartment, usersalt, createdat, isdeleted, isadmin,userpassword } = ctx.request.body;
-    if(userid && username && usercredential && userdepartment && usersalt && createdat && isdeleted && isadmin) {
-        const createUser = await User.create({
-            user_id: userid,
-            user_realname: username,
-            user_credential: usercredential,
-            user_department: userdepartment,
-            user_salt: usersalt,
-            createdAt: createdat,
-            isDeleted: isdeleted,
-            isAdmin: isadmin,
-            user_password: userpassword
+  //  const { userid, username, usercredential, userdepartment, usersalt, createdat, isdeleted, isadmin,userpassword } = ctx.request.body;
+   // if(userid && username && usercredential && userdepartment && usersalt && createdat && isdeleted && isadmin) {
+           User.create({
+            user_id:  ctx.request.body.userid,
+            user_realname:  ctx.request.body.username,
+            user_credential:  ctx.request.body.usercredential,
+            user_department:  ctx.request.body.userdepartment,
+            user_salt:  ctx.request.body.usersalt,
+            createdAt:  ctx.request.body.createdat,
+            isDeleted:  ctx.request.body.isdeleted,
+            isAdmin:  ctx.request.body.isadmin,
+            user_password:  ctx.request.body.userpassword
         });
     
         ctx.body = createUser ? {
@@ -27,21 +27,16 @@ async function createUser(ctx) {
             status: "fail",
             data: null
         }
-    } else {
+    }/* else {
         ctx.body = {
             status: "fail",
             data: null
         }
     }
     
-}
+}*/
 
 
-
-async function loginpageUser(ctx) {
-    await ctx.render("login", { user_info: {} });
-
-}
 
 
 
