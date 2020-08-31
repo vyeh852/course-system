@@ -1,0 +1,14 @@
+{
+
+    "version":2,
+    "routes":[{
+        "src":"/userpage",
+        "dest":"/app.js",
+        "methods":["GET"]
+
+
+
+    }]
+    
+
+}

@@ -63,7 +63,10 @@ router
 
   //userpage
 
-    .get('/userpage',(ctx)=>{ctx.render("userepage");
+    .get('/test',(req,res)=>{
+        res.json[{
+            name:"hi"
+        }]
          
     })
 
