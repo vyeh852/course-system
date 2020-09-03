@@ -109,5 +109,5 @@ async function signupUser(ctx) {   //bodyparser功能: the parsed body will stor
 
 
 module.exports = {
-    createUser,signuppageUser ,signupUser ,loginpageUser,loginUser       
+    createUser,signuppageUser ,signupUser ,loginUser       
 }

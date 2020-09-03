@@ -47,7 +47,7 @@ router
 
     .get('/user/signuppage', UserController.signuppageUser)
     .post('/user/signup', UserController.signupUser)
-    .get('/user/loginpage', UserController.loginpageUser)
+    
     .get('/user/login', UserController.loginUser)
 
 
