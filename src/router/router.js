@@ -47,7 +47,7 @@ router
 
     .get('/user/signuppage', UserController.signuppageUser)
     .post('/user/signup', UserController.signupUser)
-    .get('/user/loginpage', UserController.loginpageUser)
+    
     .get('/user/login', UserController.loginUser)
 
 
@@ -63,7 +63,10 @@ router
 
   //userpage
 
-    .get('/userpage',(ctx)=>{ctx.render("userepage");
+    .get('/test',(req,res)=>{
+        res.json[{
+            name:"hi"
+        }]
          
     })
 
