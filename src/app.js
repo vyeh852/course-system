@@ -7,6 +7,7 @@ const views = require("koa-views");   //匯入view
 const mysql = require('mysql');
 const db = require("./database");
 
+const PORT = process.env.PORT || 3000;
 const app = new koa();
 
 //orm,mvc架構
@@ -36,4 +37,6 @@ app.use(async ctx => {
   ctx.body = ctx.request.body;
 });
 // Open a server instance
-app.listen(3000);
+app.listen(PORT, () => {
+  console.log(`[SERVER] is listening on port ${PORT}`)
+  })
