@@ -29,8 +29,7 @@
     "pug": "^3.0.0",
     "query": "^0.2.0",
     "sequelize": "^6.3.4",
-    "sequelize-cli": "^6.2.0",
-    "yarn": "^1.22.4"
+    "sequelize-cli": "^6.2.0"
   },
   "devDependencies": {
     "sequelize-auto": "^0.5.1"
